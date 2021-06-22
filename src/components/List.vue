@@ -25,7 +25,6 @@
             id="checkbox-1"
             name="selected"
             v-model="listItem.isSelected"
-            name="checkbox-1"
             value="listItem.price"
             style="zoom:2;"
             @change="calculateTotal($event)"
@@ -53,14 +52,23 @@
       };
     }
 
+    private created() {
+      /* Array Prototype - forEach */
+      this.$props.productList.forEach((item: any) => {
+        item.isSelected = false;
+      });
+    }
+
     private calculateTotal() {
+      this.$data.totalAmount = 0;
+
       /* ES6-feature - let keyword */
       let i = 0;
 
       /* ES6-feature - Iterator For..Of */
       for (const item of this.$props.productList) {
         if (item.isSelected) {
-          i += item.price;
+          i += Number(item.price);
         }
       }
       this.$data.totalAmount = i;

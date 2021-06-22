@@ -44,8 +44,8 @@
     private data() {
       return {
         productForm: {
-          productName: 'ss',
-          price: 12,
+          productName: '',
+          price: null,
         },
       };
     }

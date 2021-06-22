@@ -35,8 +35,8 @@
     private data() {
       return {
         form: {
-          email: 'sample@email.com',
-          password: 'password',
+          email: '',
+          password: '',
         },
       };
     }
