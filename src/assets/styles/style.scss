@@ -1,0 +1,68 @@
+@import "./variables";
+@import "./mixins";
+
+button {
+  color: $white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  width: 80px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  outline: none;
+  border-color: $primary;
+  background-color: $primary !important;
+}
+
+.navbar {
+  background-color: $primary;
+}
+
+.card-title {
+  color: $primary;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+form {
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  margin: 0 auto;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+  width: 350px;
+  border: 1px solid $gray;
+  padding: 50px;
+
+  input {
+    padding: 4px 5px;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  label {
+    font-weight: 600;
+  }
+}
+
+.success-message {
+  // Used mixin
+  @include success-message;
+}
+
+h5 {
+  color: $primary;
+  font-weight: 600;
+  text-align: center;
+}

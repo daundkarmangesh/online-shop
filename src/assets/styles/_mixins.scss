@@ -1,0 +1,7 @@
+@import "./variables";
+
+@mixin success-message {
+    color: $success;
+    font-size: 20px;
+    font-weight: 600;
+}
